@@ -1,0 +1,214 @@
+﻿/* reset */
+body, div, p, ul, li, table, tbody, tr, td, textarea, form, input, h1, h2, h3, h4, h5, dl, dt, dd, img, iframe, header, nav, section, article, footer, figure, figcaption, menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body {
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica;
+    -webkit-user-select: none;
+    -webkit-text-size-adjust: none;
+    font-size: 12px;
+}
+header, nav, section, article, footer, figure, figcaption {
+    display: block;
+}
+ol, ul form{
+    margin: 0;
+    padding: 0;
+}
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+a, li, ul, [onclick] {
+    -webkit-tap-highlight-color: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+em, strong {
+    font-weight: normal;
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+}
+a:focus {
+    outline: none;
+}
+img {
+    border: none;
+}
+.hide {
+    display: none;
+}
+.c:before, .c:after {
+    content: "";
+    display: table
+}
+.c:after {
+    clear: both
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.pr {
+    position: relative;
+}
+.c1 {
+    color: #ffdc72;
+}
+body {
+    -webkit-background-size: 500px auto;
+    background-size: 500px auto;
+}
+
+.footer {
+    width: 320px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 10px;
+    color: #7b7b7b;
+}
+/* css修改 */
+.login {
+    float: right;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    color: #eaf4f2;
+    margin-top: 8px;
+}
+.login a {
+    color: #F7DF39;
+}
+.login a:hover {
+    color: #FCF6CB;
+}
+
+.main {
+    width: 268px;
+    margin: 0 auto;
+    /*border: 1px solid #494949;*/
+    /*background-color: #282d4e;*/
+}
+.book_top_cover {
+    background: #202629;
+    width: 100%;
+    height: 66px;
+}
+.bottom_cover{
+    background: #000;
+    width: 100%;
+    color: #cccccc;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif, "宋体";
+    padding: 20px 0;
+}
+.logo {
+    float: left;
+    margin: 5px 0 0 10px;
+}
+.tit1 {
+    width: 152px;
+    height: 19px;
+    background-position: 0 -90px;
+}
+.mt5 {
+    margin-top: 5px;
+}
+.txt1 {
+    color: #F8F8F8;
+    font-weight: bold;
+    text-align: right;
+    text-shadow: 1px 1px 1px #1d1d1d;
+    vertical-align: top;
+}
+.line1 {
+}
+.tb1 td {
+    padding: 5px 0;
+    line-height: 35px;
+}
+.box1 {
+    text-align: center;
+    margin-top: 15px;
+}
+.ipt1 {
+    border: 1px solid #5e5e5e;
+    background-color: #fff;
+    color: #626262;
+    padding: 0 5px;
+    height: 35px;
+    line-height: 35px;
+    width: 180px;
+}
+.slt1 {
+    width: 180px;
+    padding-left: 5px;
+    color: #626262;
+    border: 1px solid #5e5e5e;
+    height: 35px;
+    line-height: 30px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+.btn {
+    width: 130px;
+    display: inline-block;
+    overflow: hidden;
+}
+.btn img {
+    width: 130px;
+}
+.box-slt {
+    position: relative;
+    background-color: #fff;
+}
+.box-slt:after {
+    content: '';
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    width: 0px;
+    height: 0px;
+    -webkit-transform: rotate(45deg);
+    border-left: 5px solid transparent;
+    box-shadow: 1px 1px 0 #4e4e4e;
+    -webkit-box-shadow: 1px 1px 0 #4e4e4e;
+    pointer-events: none;
+}
+.btn{
+    background-image:url("../images/duihuan.png") ;
+    height: 40px;
+    width: 130px;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-indent:-9999px;
+    border: none;
+}
+.bg {background:url(../images/1.jpg) no-repeat 50% 0;background-size: 100% auto; margin: 0 auto;max-width: 750px;}
+
+@media screen and (max-width: 768px) {
+    .bg {
+        height: 350px;
+        overflow: hidden;
+    }
+}
+@media screen and (min-width: 768px) {
+    .bg {
+        height: 600px;
+        overflow: hidden;
+    }
+}

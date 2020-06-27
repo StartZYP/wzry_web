@@ -1,0 +1,107 @@
+<html lang="uft-8">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>英雄联盟激活</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <link rel="stylesheet" href="/images/style.css">
+    <link rel="stylesheet" href="/images/layer.css" id="layui_layer_skinlayercss">
+</head>
+<body style="background-color:#30374b;">
+<div class="book_top_cover clearfix"><div class="logo"><a><img src="/images/logo.png" height="50"></a></div></div>
+<div class="bg"></div>
+<div style="text-align: center; font-size: 12px; color:yellow; line-height: 50px">风靡全球的MOBA经典之作《英雄联盟》正版手游预约正式开启</div>
+<div class="main">
+    <form action="" method="post" id="myform" novalidate="novalidate">
+        <div class="line1">
+            <table class="tb1">
+                <tbody>
+                <tr id="roleSelectorPanel">
+                    <td class="txt1" style="font-size:12px;">请选择服务器：</td>
+                    <td>
+                        <div class="box-slt mt5">
+                            <select class="slt1 valid" id="father" name="father" aria-invalid="false">
+                                <option value="0">请选择服务器</option>
+                                <option value="4">手Q-安卓(android)</option>
+                                <option value="6">手Q-苹果(ios)</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="txt1" id="QQweixin" style="font-size:12px;">请输入帐号：</td>
+                    <td>
+                        <input class="ipt1" name="userName" id="userAccount" value="" type="text" maxlength="16">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="txt1" style="font-size:12px;">激活码：</td>
+                    <td>
+                        <input class="ipt1" name="cdk" id="exchangeCDKeyValue" value="" type="text" maxlength="15">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="box1">
+            <input class="btn" style="margin-left: 30px;" type="submit">
+        </p>
+    </form>
+</div>
+<div style="height: 60px"></div>
+<div class="bottom_cover clearfix">
+COPYRIGHT &copy; 1998-2019 FEMACEMT.ALL RIGHTS RESRRVED<BR/><br>
+    粤网文[2017]6133-1455号 | （总）网出证（粤）字第052号
+</div>
+<script type="text/javascript" src="/images/jquery.min.js"></script>
+<script type="text/javascript" src="/images/layer.js"></script>
+<script type="text/javascript" src="/images/H-ui.min.js"></script>
+<script type="text/javascript" src="/images/jquery.validate.js"></script>
+<script type="text/javascript" src="/images/common.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#myform").validate({
+            submitHandler:function(form){
+                if ($("#father").val() ==0){
+                    layer.msg('请选择服务器');
+                    return false;
+                }
+
+                if ($("#userAccount").val()==""){
+                    layer.msg('请输入账号');
+                    return false;
+                }
+                if ($("#exchangeCDKeyValue").val()==""){
+                    layer.msg('请输入激活码');
+                    return false;
+                }
+
+                var exchangeCDKeyValue = $.trim($('#exchangeCDKeyValue').val());
+                var userAccount = $.trim($('#userAccount').val());
+                var father = $.trim($('#father').val());
+                var verifyCode = $.trim($('#verifyCode').val());
+
+                    $.ajax({
+                    'url': '/duihuan',
+                    'type': 'POST',
+                    // 'contentType': "application/json",
+                    'data': {
+                        userAccount: userAccount,
+                        exchangeCDKeyValue: exchangeCDKeyValue,
+                        roleName: father
+                    },
+                    'dataType': 'json',
+                    'success': function (result) {
+                        var code = result.code;
+                        var data = result.data;
+                        alert(result.msg);
+                    },
+                    'error': function (re, EX) {
+                       alert(re.responseText);
+                    }
+                });
+            }
+        });
+    });
+</script>
+
+</body></html>
